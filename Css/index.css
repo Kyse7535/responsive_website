@@ -20,7 +20,7 @@ body {
 
 header {
     display: grid;
-    grid-template: 5fr 1fr 1fr / 1fr;
+    grid-template: 4.65116fr 1fr 1fr / 1fr;
     row-gap: 20px;
     column-gap: 20px;
     margin: 20px auto;
@@ -30,27 +30,68 @@ header {
     grid-area: 1/1/ 2/ 2;
     background: url('./pizza-1344720_1280.jpg') center no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     height: 400px;
+}
+
+.header1_text {
+    margin-left: 5%;
+}
+
+.header1_text h2,
+.header1_text p {
+    background-color: #ffc600;
+    font-family: 'poppins';
+}
+
+.header1_text h2 {
+    font-size: 30px;
+    padding: 10px 15px;
+}
+
+.header1_text p {
+    width: 45%;
+    font-size: 15px;
+    margin: 5% 0;
 }
 
 .tacos {
     grid-area: 2/1/ 3/ 2;
     background-color: #ffc600;
     color: #272727;
-    height: 80px;
 }
 
 .kamboucha {
     grid-area: 3/1/4/ 2;
     background-color: #ffc600;
     color: #272727;
-    height: 80px;
+}
+
+.tacos,
+.kamboucha {
+    display: grid;
+    grid-template: auto-fit/ 100%;
+    text-align: center;
+    font-family: 'poppins';
+    align-content: center;
+}
+
+.price {
+    grid-area: 1/1/2/2;
+    font-size: 40px;
+    align-items: flex-end;
+}
+
+.type {
+    grid-area: 2/1/3/2;
 }
 
 @media (min-width: 501px) and (max-width: 700px) {
     header {
         display: grid;
-        grid-template: 5fr 1fr / 1fr 1fr;
+        grid-template: 4.65116fr 1fr / 1fr 1fr;
     }
     .header1 {
         grid-area: 1/1/ 2/ 3;
@@ -80,6 +121,9 @@ header {
         grid-area: 2/3/3/ 4;
         height: 190px;
     }
+    .price {
+        font-size: 60px;
+    }
 }
 
 
@@ -102,6 +146,21 @@ header {
 .feature4 {
     height: 165px;
     background-color: #fff;
+    display: grid;
+    grid-template: 50% 50%/ 1fr;
+}
+
+.features figure {
+    grid-area: 1/1/2/2;
+}
+
+.features p {
+    grid-area: 2/1/3/2;
+}
+
+figure img {
+    height: 100%;
+    width: auto;
 }
 
 
@@ -129,12 +188,20 @@ ul li {
 
 .menu {
     margin: 0% auto;
+    font-family: 'poppins';
 }
 
 .menu a {
     text-decoration: none;
     color: #272727;
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 button {
@@ -209,9 +276,13 @@ button {
 @media (min-width: 700px) {
     .feat_taco {
         display: grid;
-        grid-template: 1fr / 35% 65%;
-        padding: 50px;
+        grid-template: 100% / 30% 70%;
         background-color: #fff;
+        max-height: 400px;
+    }
+    .feat_taco img {
+        height: 100%;
+        width: auto;
     }
     .feat_taco_text {
         grid-area: 1/2/2/3;
